@@ -2,37 +2,38 @@ import React from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { motion} from "framer-motion"
 import { fadeIn } from "../variants"
+import { Link } from 'react-scroll'
 
 
 // services data 
 const services = [
   {
     name: 'Encriptador-Alura',
-    description: "Pon un texto y sera encriptado clases alura usando solo html, css y Javascript",
+    description: "Put a text and it will be encrypted alura classes using only html, css and Javascript.",
     link: "https://encriptador-alura-brandollguz.netlify.app/",
     ancla: "Encriptador",
   },
   {
     name: 'E-commerce',
-    description: "E-commerce usando Api redux redux/toolki react-vites ",
+    description: "E-commerce using Api redux redux/toolki react-vites ",
     link: "https://sexto-entregable-ecommerce-brandollgu.netlify.app/",
     ancla: "E-commerce",
   },
   {
     name: 'pokedex',
-    description: "consumiendo Api de pokemon y trayendo datos clases react",
+    description: "consuming pokemon api and fetching data clases react",
     link: "https://entregable-5-poquedex-brandollguz.netlify.app/",
     ancla: "Pokedex",
   },
   {
-    name: 'Fraces Aleatorias ',
-    description: "preciona el boton y te traera frases aleatorias del espacio mientras el fondo cambia a su ves ",
+    name: 'Random Phrases ',
+    description: "press the button and it will bring you random phrases from space while the background changes to suit you ",
     link: "https://primer-entregable-react-brandollguz.netlify.app/",
-    ancla: "Fraces",
+    ancla: "phrases",
   },
   {
-    name: 'Creador de tarjetas',
-    description: "crea tarjetas personales puedes eliminarlas editarlas y crear cuantas quieras ",
+    name: 'card maker',
+    description: "create personal cards you can delete them edit them and create as many as you want ",
     link: "https://cuarto-entregable-react-brandollguz.netlify.app/",
     ancla: "Tarjetas ",
   }
@@ -56,7 +57,9 @@ const Services = () => {
             <h3 className='h3 max-w-[455px] mb-16'>
               I'm a Freelance front-end Developer whith over 2 years of experience.
             </h3>
+            <Link to='work'>
             <button className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110 mr-4'>See my work </button>
+            </Link>
           </motion.div>
           {/* services */}
           <motion.div

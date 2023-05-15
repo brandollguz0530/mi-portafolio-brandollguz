@@ -5,6 +5,7 @@ import img1 from '/images/proyect1.png'
 import img2 from '/images/proyect2.png'
 import img3 from '/images/proyect3.png'
 import img4 from '/images/proyect4.png'
+import { Link } from 'react-scroll'
 
 
 const Work = () => {
@@ -24,9 +25,11 @@ const Work = () => {
                 proyect .
               </h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet cumque incidunt sunt omnis aliquam iusto doloremque, adipisci quasi vero voluptatem aliquid culpa saepe fugiat doloribus quisquam officia iure. Quasi, modi.
+              These are some of the projects that I have developed throughout my career. I hope you enjoy them and that they serve to show my knowledge of the technologies that I manage.
               </p>
+              <Link to='services'>
               <button className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110 mt-6'>View all projects</button>
+              </Link>
             </motion.div>
             </div>
             {/* todas las imagenes  */}
@@ -47,7 +50,7 @@ const Work = () => {
               {/* pretittle */}
               <div className='text-2xl text-center text-gradient  mb-[30px] absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>E-commerce</div>
               {/* ittle */}
-              <div className=' text-center text-gradient text-sm mb-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>E-commerce usando Api redux redux/toolki react-vites</div>
+              <div className=' text-center text-gradient text-sm mb-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>E-commerce using Api redux redux/toolki react-vites</div>
               </div>
             </div>
             </a>
@@ -62,9 +65,9 @@ const Work = () => {
               {/* img */}
               <img className='group-hover:scale-125 transition-all duration-500' src={img2} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }}/>
               {/* pretittle */}
-              <div className='text-2xl text-center text-gradient  mt-4 absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>Pokedex</div>
+              <div className='text-2xl text-center text-gradient  mt-4 absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[40px]'>Pokedex</div>
               {/* ittle */}
-              <div className=' text-center text-gradient text-sm mt-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>Consumiendo Api de pokedex con react </div>
+              <div className=' text-center text-gradient text-sm mt-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>consuming pokemon api and fetching data clases react </div>
               
             </div>
           </div>
@@ -80,9 +83,9 @@ const Work = () => {
               {/* img */}
               <img className='group-hover:scale-125 transition-all duration-500' src={img3} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }}/>
               {/* pretittle */}
-              <div className='text-2xl text-center text-gradient   absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[50px]'>Frases Aleatorias</div>
+              <div className='text-2xl text-center text-gradient   absolute -bottom-full left-8 group-hover:bottom-24 transition-all duration-500 z-50 mb-[80px]'>Random Phrases</div>
               {/* ittle */}
-              <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50 mb-8'>presiona el boton y te traera una frase aleatoria mientras cambia el fondo  </div>
+              <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>press the button and it will bring you random phrases from space while the background changes to suit you   </div>
               
             </div>
           </div>
@@ -98,9 +101,9 @@ const Work = () => {
               {/* img */}
               <img className='group-hover:scale-125 transition-all duration-500' src={img4} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }}/>
               {/* pretittle */}
-              <div className='text-2xl text-center text-gradient   absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[50px]'>Web del clima </div>
+              <div className='text-2xl text-center text-gradient   absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[50px]'>weather website </div>
               {/* ittle */}
-              <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50 mb-8'>Te da la ubicacion en que te encuentras y el clima </div>
+              <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50 mb-8'>It gives you the location where you are and the weather </div>
               
             </div>
             </div>

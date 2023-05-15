@@ -11,7 +11,7 @@ const Contact = () => {
       whileInView={'show'} 
       viewport={{once: false, amount: 0.3}} 
       className="container mx-auto">
-        <div className='flex flex-col lg:flex-row'>
+        <div className='flex flex-col lg:flex-row mt-[500px]'>
             {/* text */}
             <div className='flex-1'>
               <div>
