@@ -9,6 +9,7 @@ import { TypeAnimation} from 'react-type-animation'
 import {motion} from 'framer-motion'
 // variants 
 import {fadeIn} from "../variants"
+import { Link } from 'react-scroll'
 
 
 const Banner = () => {
@@ -62,7 +63,9 @@ const Banner = () => {
           whileInView={'show'} 
           viewport={{once: false, amount: 0.7}}
           className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+          <Link to='contact'>
           <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>Contact me</button>
+          </Link>
           <a href="#" className='text-gradient btn-link'>
               My Portfolio
           </a>
