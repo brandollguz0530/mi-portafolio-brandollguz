@@ -15,7 +15,7 @@ const Header = () => {
           </a>
           
           <Link to='work'>
-          <button  className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110'>Work winh me</button>
+          <button  className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110'>Work with me</button>
           </Link>
           
         </div>

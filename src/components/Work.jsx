@@ -22,7 +22,7 @@ const Work = () => {
             viewport={{once: false, amount: 0.3}} 
             >
               <h2 className='h2 leading-tight text-accent'>My Latest <hr />
-                proyect .
+                project .
               </h2>
               <p>
               These are some of the projects that I have developed throughout my career. I hope you enjoy them and that they serve to show my knowledge of the technologies that I manage.

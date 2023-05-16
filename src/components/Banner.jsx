@@ -66,7 +66,7 @@ const Banner = () => {
           <Link to='contact'>
           <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>Contact me</button>
           </Link>
-          <a href="#" className='text-gradient btn-link'>
+          <a href="https://docs.google.com/document/d/1nSD55wwDLEsA8wT9XLXJ7MlD_NdgZAEs2f-XS5PGLZQ/edit#heading=h.4z0xou8fguoj" class="text-gradient btn-link" target="_blank">
               My Portfolio
           </a>
           </motion.div>
