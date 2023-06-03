@@ -7,7 +7,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    emailjs.sendForm("service_ydto0ys", "template_3yfrc57", e.target, "sAJXRtFXs8eTOxrxt")
+    emailjs.sendForm(
+      import.meta.env.VITE_APP_SERVICE_ID,
+      import.meta.env.VITE_APP_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_APP_PUBLIC_KEY
+    )
       .then((res) => console.log(res.text))
       .catch((err) => console.log(err))
   }
