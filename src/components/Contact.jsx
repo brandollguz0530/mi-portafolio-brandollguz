@@ -10,16 +10,6 @@ const Contact = () => {
 
   const formRef = useRef(null)
 
-  const mostraralerta = () => {
-    swal({
-      title: "The mail was sent",
-      text: "Your message was sent successfully I will contact you immediately",
-      icon: "success",
-      button: "ready",
-
-    })
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
