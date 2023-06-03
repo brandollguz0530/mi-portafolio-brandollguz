@@ -1,21 +1,77 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from "framer-motion"
 import { fadeIn } from "../variants"
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'
+import swal from 'sweetalert'
+
+
 
 const Contact = () => {
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    emailjs.sendForm(
-      import.meta.env.VITE_APP_SERVICE_ID,
-      import.meta.env.VITE_APP_TEMPLATE_ID,
-      e.target,
-      import.meta.env.VITE_APP_PUBLIC_KEY
-    )
-      .then((res) => console.log(res.text))
-      .catch((err) => console.log(err))
+  const formRef = useRef(null)
+
+  const mostraralerta = () => {
+    swal({
+      title: "The mail was sent",
+      text: "Your message was sent successfully I will contact you immediately",
+      icon: "success",
+      button: "ready",
+
+    })
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.from_name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    if (name && email && message) {
+      emailjs.sendForm(
+        "service_ydto0ys",
+        "template_3yfrc57",
+        e.target,
+        "kyheoB4iDe3FCtYSj"
+      )
+        .then((res) => {
+          console.log(res.text);
+          formRef.current.reset();
+          mostrarAlertaExito();
+        })
+        .catch((err) => console.log(err));
+    } else {
+      mostrarAlertaCamposRequeridos();
+    }
+  };
+
+  const mostrarAlertaExito = () => {
+    swal({
+      title: "The mail was sent",
+      text: "Your message was sent successfully. I will contact you immediately.",
+      icon: "success",
+      buttons: {
+        requeridos: {
+          text: "ready",
+          className: "bg-purple-700", // Clases de color de Tailwind CSS
+        },
+      },
+    });
+  };
+
+  const mostrarAlertaCamposRequeridos = () => {
+    swal({
+      title: "Campos requeridos",
+      text: "Por favor, completa todos los campos antes de enviar el mensaje.",
+      icon: "error",
+      buttons: {
+        requeridos: {
+          text: "Entiendo",
+          className: "bg-purple-700", // Clases de color de Tailwind CSS
+        },
+      },
+    });
+  };
 
 
   return (
@@ -36,6 +92,7 @@ const Contact = () => {
           </div>
           {/* form */}
           <motion.form
+            ref={formRef}
             variants={fadeIn('left', 0.2)}
             initial='hidden'
             whileInView={'show'}
@@ -62,7 +119,9 @@ const Contact = () => {
               name="message"
             ></textarea>
 
-            <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110'>Send message</button>
+            <button
+              onClick={() => mostraralerta()}
+              className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110'>Send message</button>
           </motion.form>
         </div>
       </motion.div>
