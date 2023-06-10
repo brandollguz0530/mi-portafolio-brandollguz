@@ -34,7 +34,7 @@ const About = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className=' flext-1 '>
+            className=' flex-1 '>
             <h2 className='h2 text-accent'> About me.</h2>
             <p className=' mb-4'>
               ¡Hello,I am Brandoll Josue Guzman Carrillo! A passionate software developer, currently I dedicate myself to study and improve. I am always looking for ways to improve and learn new technologies in my spare time. It fascinates me to keep abreast of the latest development trends and never stop learning new things. Aside from my love of programming, I also enjoy soccer and travel I love to travel. Thank you for visiting my portfolio, I hope you enjoy it as much as I enjoyed creating it!
