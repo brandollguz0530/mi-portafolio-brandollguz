@@ -22,6 +22,30 @@
     </style>
   </head>
   <body>
+    <header class="py-8">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <!-- {/* LOGO */} -->
+          <a
+            href="https://api.whatsapp.com/send?phone=+50588696072&text=Hola%20estoy%20usando%20WhatsApp"
+            target="_blank"
+          >
+            <img
+              class="w-[50px] h-[50px] bg-gradient-to-r from-purple-700 via-blue-700 to-pink-500 rounded-md p-2 border-[3px] border-purple-950 transition duration-300 transform hover:scale-110 focus:scale-110"
+              src="/images/logo.svg"
+              alt="Logo"
+            />
+          </a>
+
+          <button
+            class="mt-10 top-10 right-10 btn btn-sm transition duration-300 hover:scale-110 focus:scale-110"
+          >
+            Work with me
+          </button>
+        </div>
+      </div>
+    </header>
+
     <div class="svg-box">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
         <defs />
@@ -701,6 +725,9 @@
     <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
     <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
     <script>
+      gsap.config({
+        trialWarn: false,
+      });
       /* SVG ANIMATION */
 
       function animation() {
@@ -1390,7 +1417,6 @@
         tick();
       }
       objects();
-      gsap.config({ trialWarn: false });
     </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
