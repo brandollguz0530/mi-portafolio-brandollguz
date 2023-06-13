@@ -55,7 +55,7 @@ const About = () => {
                 <div className='text-[40px] font-tertiary text-gradient mb-2'>
                   {
                     inView ? <CountUp start={0} end={7} duration={3} /> : null}
-                  k+
+
                 </div>
                 <div className='font-primary text-sm tracking-[2px]'>
                   Projects <br />
@@ -67,7 +67,7 @@ const About = () => {
 
                   {
                     inView ? <CountUp start={0} end={10} duration={3} /> : null}
-                  k+
+
                 </div>
 
                 <div className='font-primary text-sm tracking-[2px]'>
