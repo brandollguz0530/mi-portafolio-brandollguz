@@ -1,0 +1,31 @@
+{
+  "Banner": {
+    "skills": "Soy un",
+    "I_m": "Soy programador con experiencia en HTML, Tailwind CSS, CSS3, JavaScript y React.",
+    "CV": "Mi CV",
+    "contac": "contáctame",
+    "About": "ACERCA DE MÍ.",
+    "About_me": "¡Hola, soy Brandoll Josué Guzmán Carrillo! Desarrollador de software apasionado, actualmente me dedico a estudiar y mejorar. Siempre estoy buscando formas de mejorar y aprender nuevas tecnologías en mi tiempo libre. Me fascina estar al tanto de las últimas tendencias de desarrollo y nunca dejar de aprender cosas nuevas. Además de mi amor por la programación, también disfruto del fútbol y viajar. Me encanta viajar. ¡Gracias por visitar mi portafolio, espero que lo disfruten tanto como yo disfruté creándolo!",
+    "experience": "Años de Experiencia",
+    "projects": "Proyectos Completados",
+    "creating": "Cuanto me gusta crearlas del 1 al 10",
+    "Project": "Lo que hago .",
+    "h3": "Soy un desarrollador front-end freelance con más de 2 años de experiencia.",
+    "Work": "ver mi trabajo",
+    "project#1": "Encriptador-Alura",
+    "description#1": "Ponga un texto y se encriptara usando solo html, css y Javascript.",
+    "anchor#1": "Encriptador",
+    "project#2": "comercio electrónico",
+    "description#2": "Comercio electrónico utilizando Api redux redux/toolkit react-vites. ",
+    "anchor#2": "E-commerce",
+    "project#3": "pokedex",
+    "description#3": "consumir api de pokemon y obtener clases de datos react .",
+    "anchor#3": "pokedex",
+    "project#4": "Frases aleatorias",
+    "description#4": "presione el botón y le traerá frases aleatorias del espacio mientras el fondo cambia para adaptarse a usted.",
+    "anchor#4": "frases",
+    "project#5": "fabricante de tarjetas",
+    "description#5": "crear tarjetas personales puedes borrarlas editarlas y crear tantas como quieras.",
+    "anchor#5": "cartas"
+  }
+}

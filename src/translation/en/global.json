@@ -1,0 +1,31 @@
+{
+  "Banner": {
+    "skills": "I Am a",
+    "I_m": "I am a programmer with expertise in HTML, Taiwind CSS, CSS3, JavaScript, and React.",
+    "CV": "My CV",
+    "contac": "contact me",
+    "About": "ABOUT ME.",
+    "About_me": "¡Hello,I am Brandoll Josue Guzman Carrillo! A passionate software developer, currently I dedicate myself to study and improve. I am always looking for ways to improve and learn new technologies in my spare time. It fascinates me to keep abreast of the latest development trends and never stop learning new things. Aside from my love of programming, I also enjoy soccer and travel I love to travel. Thank you for visiting my portfolio, I hope you enjoy it as much as I enjoyed creating it!",
+    "experience": "Years of Experience",
+    "projects": "Projects Completed",
+    "creating": "how much I enjoy creating them from 1 to 10",
+    "Project": "What I Do .",
+    "h3": "I'm a Freelance front-end Developer whith over 2 years of experience.",
+    "Work": "See my work",
+    "project#1": "Encryptor-Alura",
+    "description#1": "Put some text and it will be encrypted using only html, css and Javascript.",
+    "anchor#1": "Encryptor",
+    "project#2": "E-commerce",
+    "description#2": "E-commerce using Api redux redux/toolki react-vites. ",
+    "anchor#2": "E-commerce",
+    "project#3": "pokedex",
+    "description#3": "consuming pokemon api and fetching data clases react .",
+    "anchor#3": "pokedex",
+    "project#4": "Random Phrases",
+    "description#4": "press the button and it will bring you random phrases from space while the background changes to suit you.",
+    "anchor#4": "phrases",
+    "project#5": "card maker",
+    "description#5": "create personal cards you can delete them edit them and create as many as you want.",
+    "anchor#5": "cards"
+  }
+}

@@ -10,9 +10,14 @@ import { motion } from 'framer-motion'
 // variants 
 import { fadeIn } from "../variants"
 import { Link } from 'react-scroll'
+import { useTranslation } from "react-i18next"
 
 
 const Banner = () => {
+  const [t, i18n] = useTranslation("global")
+
+
+
   return (
     <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
       <div className="container mx-auto">
@@ -33,13 +38,13 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
               className='mb-4 text-[30px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]'>
-              <span className=' text-white mr-4'> I Am a   </span>
+              <span className=' text-white mr-4'> {t("Banner.skills")}   </span>
               <TypeAnimation sequence={[
-                'Developer,',
+                "Developer,",
                 2000,
-                'Designer,',
+                "Designer,",
                 2000,
-                'Full Stack',
+                "full Stack,",
                 2000,
               ]}
                 speed={50}
@@ -55,7 +60,7 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
               className='mb-8 max-w-lg mx-auto lg:mx-0'>
-              I am a programmer with expertise in HTML, Taiwind CSS, CSS3, JavaScript, and React.
+              {t("Banner.I_m")}
             </motion.p>
             <motion.div
               variants={fadeIn('up', 0.6)}
@@ -64,10 +69,10 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <Link to='contact'>
-                <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>Contact me</button>
+                <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>{t("Banner.contac")}</button>
               </Link>
               <a href="https://docs.google.com/document/d/1nSD55wwDLEsA8wT9XLXJ7MlD_NdgZAEs2f-XS5PGLZQ/edit#heading=h.4z0xou8fguoj" class="text-gradient btn-link" target="_blank">
-                My Portfolio
+                {t("Banner.CV")}
               </a>
             </motion.div>
             {/* social */}

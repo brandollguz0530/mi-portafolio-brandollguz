@@ -9,9 +9,15 @@ import { motion } from "framer-motion"
 import { fadeIn } from "../variants"
 import { Link } from 'react-scroll'
 // Link
+import { useTranslation } from "react-i18next"
+
 
 
 const About = () => {
+
+  const { t } = useTranslation("global")
+  console.log(t("Banner.contact"))
+
   const [ref, inView] = useInView({
     threshold: 0.5,
   })
@@ -35,10 +41,8 @@ const About = () => {
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
             className=' flex-1 '>
-            <h2 className='h2 text-accent'> About me.</h2>
-            <p className=' mb-4'>
-              ¡Hello,I am Brandoll Josue Guzman Carrillo! A passionate software developer, currently I dedicate myself to study and improve. I am always looking for ways to improve and learn new technologies in my spare time. It fascinates me to keep abreast of the latest development trends and never stop learning new things. Aside from my love of programming, I also enjoy soccer and travel I love to travel. Thank you for visiting my portfolio, I hope you enjoy it as much as I enjoyed creating it!
-            </p>
+            <h2 className='h2 text-accent'>{t("Banner.About")}</h2>
+            <p className=' mb-4'>{t("Banner.About_me")}</p>
             {/* stats */}
             <div className=' gap-x-6 lg:gap-x-10 mb-12 hidden lg:flex'>
               <div>
@@ -47,8 +51,7 @@ const About = () => {
                     inView ? <CountUp start={0} end={2} duration={3} /> : null}
                 </div>
                 <div className='font-primary text-sm tracking-[2px]'>
-                  Years of <br />
-                  Experience
+                  {t("Banner.experience")}
                 </div>
               </div>
               <div>
@@ -58,8 +61,7 @@ const About = () => {
 
                 </div>
                 <div className='font-primary text-sm tracking-[2px]'>
-                  Projects <br />
-                  Completed
+                  {t("Banner.projects")}
                 </div>
               </div>
               <div>
@@ -71,19 +73,18 @@ const About = () => {
                 </div>
 
                 <div className='font-primary text-sm tracking-[2px]'>
-                  how much I enjoy creating <br />
-                  them from 1 to 10
+                  {t("Banner.creating")}
                 </div>
               </div>
             </div>
             <div className='flex gap-x-8 items-center'>
               <Link to='contact'>
                 <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-4'>
-                  Contact me
+                  {t("Banner.contac")}
                 </button>
               </Link>
               <a href="https://docs.google.com/document/d/1nSD55wwDLEsA8wT9XLXJ7MlD_NdgZAEs2f-XS5PGLZQ/edit#heading=h.4z0xou8fguoj" className="text-gradient btn-link" target="_blank">
-                My Portfolio
+                {t("Banner.CV")}
               </a>
             </div>
           </motion.div>
