@@ -26,6 +26,23 @@
     "anchor#4": "phrases",
     "project#5": "card maker",
     "description#5": "create personal cards you can delete them edit them and create as many as you want.",
-    "anchor#5": "cards"
+    "anchor#5": "cards",
+    "work": "My Latests",
+    "work2": "projects .",
+    "workp": "These are some of the projects that I have developed throughout my career. I hope you enjoy them and that they serve to show my knowledge of the technologies that I manage.",
+    "workButoon": "View all projects",
+    "contact": "Get in touch",
+    "contactW": "Let's work",
+    "contactW1": "together!",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message",
+    "alert": "Required fields",
+    "alertText": "Please complete all the fields before sending the message.",
+    "alertButton": "I understand",
+    "alert1": "The mail was sent",
+    "alertText1": "Your message was sent successfully. I will contact you immediately.",
+    "alertButton1": "ready"
   }
 }

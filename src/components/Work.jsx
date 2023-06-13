@@ -6,9 +6,12 @@ import img2 from '/images/proyect2.png'
 import img3 from '/images/proyect3.png'
 import img4 from '/images/proyect4.png'
 import { Link } from 'react-scroll'
+import { useTranslation } from "react-i18next"
 
 
 const Work = () => {
+
+  const { t } = useTranslation("global")
   return (
     <section className='section' id='work'>
       <div className="container mx-auto lg:mt-[700px] lg:px-[100px]">
@@ -21,14 +24,14 @@ const Work = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.3 }}
             >
-              <h2 className='h2 leading-tight text-accent'>My Latest <hr />
-                project .
+              <h2 className='h2 leading-tight text-accent'>{t("Banner.work")} <hr />
+                {t("Banner.work2")}
               </h2>
               <p>
-                These are some of the projects that I have developed throughout my career. I hope you enjoy them and that they serve to show my knowledge of the technologies that I manage.
+                {t("Banner.workp")}
               </p>
               <Link to='services'>
-                <button className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110 mt-6'>View all projects</button>
+                <button className='btn btn-sm transition duration-300 transform hover:scale-110 focus:scale-110 mt-6'>{t("Banner.workButoon")}</button>
               </Link>
             </motion.div>
           </div>
@@ -50,7 +53,7 @@ const Work = () => {
                   {/* pretittle */}
                   <div className='text-2xl text-center text-gradient  mb-[30px] absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>E-commerce</div>
                   {/* ittle */}
-                  <div className=' text-center text-gradient text-sm mb-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>E-commerce using Api redux redux/toolki react-vites</div>
+                  <div className=' text-center text-gradient text-sm mb-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>{t("Banner.description#2")}</div>
                 </div>
               </div>
             </a>
@@ -65,9 +68,9 @@ const Work = () => {
                   {/* img */}
                   <img className='group-hover:scale-125 transition-all duration-500' src={img2} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                   {/* pretittle */}
-                  <div className='text-2xl text-center text-gradient  mt-4 absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[40px]'>Pokedex</div>
+                  <div className='text-2xl text-center text-gradient  mt-6 absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-[50px]'>Pokedex</div>
                   {/* ittle */}
-                  <div className=' text-center text-gradient text-sm mt-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>consuming pokemon api and fetching data clases react </div>
+                  <div className=' text-center text-gradient text-sm mt-4 lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>{t("Banner.description#3")} </div>
 
                 </div>
               </div>
@@ -85,7 +88,7 @@ const Work = () => {
                   {/* pretittle */}
                   <div className='text-2xl text-center text-gradient   absolute -bottom-full left-8 group-hover:bottom-24 transition-all duration-500 z-50 mb-[80px]'>Random Phrases</div>
                   {/* ittle */}
-                  <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>press the button and it will bring you random phrases from space while the background changes to suit you   </div>
+                  <div className=' text-center text-gradient text-sm  lg:absolute lg:-bottom-full lg:left-12 lg:group-hover:bottom-14 lg:transition-all lg:duration-700 lg:z-50'>{t("Banner.description#4")}</div>
 
                 </div>
               </div>

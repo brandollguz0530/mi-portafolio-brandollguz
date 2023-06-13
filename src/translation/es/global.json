@@ -26,6 +26,23 @@
     "anchor#4": "frases",
     "project#5": "fabricante de tarjetas",
     "description#5": "crear tarjetas personales puedes borrarlas editarlas y crear tantas como quieras.",
-    "anchor#5": "cartas"
+    "anchor#5": "cartas",
+    "work": "Mis últimos",
+    "work2": "proyectos .",
+    "workp": "Estos son algunos de los proyectos que he desarrollado a lo largo de mi carrera. Espero que los disfrutéis y que sirvan para mostrar mi conocimiento de las tecnologías que manejo.",
+    "workButoon": "Ver todos los proyectos",
+    "contact": "Ponerse en contacto",
+    "contactW": "Vamos a trabajar",
+    "contactW1": "¡juntos!",
+    "name": "Su nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "alert": "Campos requeridos",
+    "alertText": "Por favor, completa todos los campos antes de enviar el mensaje.",
+    "alertButton": "Entiendo",
+    "alert1": "el correo fue enviado",
+    "alertText1": "Su mensaje fue enviado exitosamente. Me comunicaré contigo de inmediato.",
+    "alertButton1": "listo"
   }
 }

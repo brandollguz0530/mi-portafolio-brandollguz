@@ -3,10 +3,13 @@ import { motion } from "framer-motion"
 import { fadeIn } from "../variants"
 import emailjs from '@emailjs/browser'
 import swal from 'sweetalert'
+import { useTranslation } from "react-i18next"
 
 
 
 const Contact = () => {
+
+  const { t } = useTranslation("global")
 
   const formRef = useRef(null)
 
@@ -37,12 +40,12 @@ const Contact = () => {
 
   const mostrarAlertaExito = () => {
     swal({
-      title: "The mail was sent",
-      text: "Your message was sent successfully. I will contact you immediately.",
+      title: t("Banner.alert1"),
+      text: t("Banner.alertText1"),
       icon: "success",
       buttons: {
         requeridos: {
-          text: "ready",
+          text: t("Banner.alertButton1"),
           className: "bg-purple-700", // Clases de color de Tailwind CSS
         },
       },
@@ -51,12 +54,12 @@ const Contact = () => {
 
   const mostrarAlertaCamposRequeridos = () => {
     swal({
-      title: "Campos requeridos",
-      text: "Por favor, completa todos los campos antes de enviar el mensaje.",
+      title: t("Banner.alert"),
+      text: t("Banner.alertText"),
       icon: "error",
       buttons: {
         requeridos: {
-          text: "Entiendo",
+          text: t("Banner.alertButton"),
           className: "bg-purple-700", // Clases de color de Tailwind CSS
         },
       },
@@ -76,8 +79,8 @@ const Contact = () => {
           {/* text */}
           <div className='flex-1'>
             <div>
-              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>Get in touch</h4>
-              <h2 className='text-[45px] uppercase lg:text-[85px] leading-none mb-12'>Let's work <br /> together!</h2>
+              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>{t("Banner.contact")}</h4>
+              <h2 className='text-[45px] uppercase lg:text-[85px] leading-none mb-12'>{t("Banner.contactW")} <br /> {t("Banner.contactW1")} </h2>
             </div>
           </div>
           {/* form */}
@@ -93,25 +96,25 @@ const Contact = () => {
             <input
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
               type="text"
-              placeholder='  Your name'
+              placeholder={t("Banner.name")}
               name="from_name"
             />
 
             <input
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
               type="text"
-              placeholder='  Your email'
+              placeholder={t("Banner.email")}
               name="email"
             />
 
             <textarea className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
-              placeholder='Your message'
+              placeholder={t("Banner.message")}
               name="message"
             ></textarea>
 
             <button
               onClick={() => mostraralerta()}
-              className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110'>Send message</button>
+              className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110'>{t("Banner.send")}</button>
           </motion.form>
         </div>
       </motion.div>
