@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next"
 const About = () => {
 
   const { t } = useTranslation("global")
-  console.log(t("Banner.contact"))
+
 
   const [ref, inView] = useInView({
     threshold: 0.5,
