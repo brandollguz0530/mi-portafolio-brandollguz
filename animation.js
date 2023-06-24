@@ -550,142 +550,147 @@ function init() {
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
-  animate();
-}
 
-init();
+  function init() {
+    // Tu código de inicialización aquí
 
-/* OBJECTS */
-
-function objects() {
-  // Canvas
-  const canvas = document.querySelector('canvas.webgl2');
-
-  // scene2
-  const scene2 = new THREE.Scene();
-
-  /**
-   * Objects
-   */
-  const objects = [];
-  const objectGeometry = new THREE.IcosahedronGeometry(1, 0);
-  const objectMaterial = new THREE.MeshStandardMaterial({
-    color: 0x6699ff,
-    metalness: 0,
-    roughness: 0,
-  });
-  for (let i = 0; i < 3; i++) {
-    const object = new THREE.Mesh(objectGeometry, objectMaterial);
-    object.scale.set(0.4, 0.4, 0.4);
-    scene2.add(object);
-    objects.push(object);
+    animate();
   }
-  objects[0].position.set(3, 0.5, 0);
-  objects[1].position.set(-3.5, 2, 0);
-  objects[2].position.set(1, 3, 0);
 
-  objects.forEach((object) => {
-    gsap
-      .to(object.rotation, {
-        x: Math.PI * 2,
-        z: Math.PI * 2,
-        repeat: -1,
-        ease: 'none',
-        duration: 8 + Math.random() * 5,
-        delay: Math.random() * 50,
-      })
-      .seek(100);
+  init();
 
-    gsap
-      .to(object.position, {
-        y: 1.5,
-        z: -1,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        duration: 4 + Math.random() * 5,
-      })
-      .seek(100);
-  });
+  /* OBJECTS */
 
-  /**
-   * Lights
-   */
-  const light = new THREE.AmbientLight(0xffffff, 1.0);
-  scene2.add(light);
+  function objects() {
+    // Canvas
+    const canvas = document.querySelector('canvas.webgl2');
 
-  const directionalLight = new THREE.DirectionalLight(0xff0000, 0.8);
-  directionalLight.position.set(5, 10, 0);
-  scene2.add(directionalLight);
+    // scene2
+    const scene2 = new THREE.Scene();
 
-  const directionalLight2 = new THREE.DirectionalLight(0xff000, 0.7);
-  directionalLight2.position.set(-5, -5, 2);
-  scene2.add(directionalLight2);
+    /**
+     * Objects
+     */
+    const objects = [];
+    const objectGeometry = new THREE.IcosahedronGeometry(1, 0);
+    const objectMaterial = new THREE.MeshStandardMaterial({
+      color: 0x6699ff,
+      metalness: 0,
+      roughness: 0,
+    });
+    for (let i = 0; i < 3; i++) {
+      const object = new THREE.Mesh(objectGeometry, objectMaterial);
+      object.scale.set(0.4, 0.4, 0.4);
+      scene2.add(object);
+      objects.push(object);
+    }
+    objects[0].position.set(3, 0.5, 0);
+    objects[1].position.set(-3.5, 2, 0);
+    objects[2].position.set(1, 3, 0);
 
-  /**
-   * Sizes
-   */
-  const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
+    objects.forEach((object) => {
+      gsap
+        .to(object.rotation, {
+          x: Math.PI * 2,
+          z: Math.PI * 2,
+          repeat: -1,
+          ease: 'none',
+          duration: 8 + Math.random() * 5,
+          delay: Math.random() * 50,
+        })
+        .seek(100);
 
-  window.addEventListener('resize', () => {
-    // Update sizes
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
+      gsap
+        .to(object.position, {
+          y: 1.5,
+          z: -1,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          duration: 4 + Math.random() * 5,
+        })
+        .seek(100);
+    });
 
-    // Update camera2
-    camera2.aspect = sizes.width / sizes.height;
-    camera2.updateProjectionMatrix();
+    /**
+     * Lights
+     */
+    const light = new THREE.AmbientLight(0xffffff, 1.0);
+    scene2.add(light);
 
-    // Update renderer2
-    renderer2.setSize(sizes.width, sizes.height);
-    renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  });
+    const directionalLight = new THREE.DirectionalLight(0xff0000, 0.8);
+    directionalLight.position.set(5, 10, 0);
+    scene2.add(directionalLight);
 
-  /**
-   * camera2
-   */
-  // Base camera2
-  const camera2 = new THREE.PerspectiveCamera(
-    75,
-    sizes.width / sizes.height,
-    0.1,
-    100
-  );
-  camera2.position.z = 5;
-  scene2.add(camera2);
+    const directionalLight2 = new THREE.DirectionalLight(0xff000, 0.7);
+    directionalLight2.position.set(-5, -5, 2);
+    scene2.add(directionalLight2);
 
-  /**
-   * renderer2
-   */
-  const renderer2 = new THREE.WebGLRenderer({
-    canvas: canvas,
-    alpha: true,
-  });
-  renderer2.setSize(window.innerWidth, window.innerHeight); // Ajustar al tamaño de toda la pantalla
-  renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer2.setClearColor(0xffffff, 0);
+    /**
+     * Sizes
+     */
+    const sizes = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
 
-  /**
-   * Animate
-   */
-  const clock = new THREE.Clock();
+    window.addEventListener('resize', () => {
+      // Update sizes
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
 
-  let currentIntersect = null;
+      // Update camera2
+      camera2.aspect = sizes.width / sizes.height;
+      camera2.updateProjectionMatrix();
 
-  const tick = () => {
-    const elapsedTime = clock.getElapsedTime();
+      // Update renderer2
+      renderer2.setSize(sizes.width, sizes.height);
+      renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
 
-    // Render
+    /**
+     * camera2
+     */
+    // Base camera2
+    const camera2 = new THREE.PerspectiveCamera(
+      75,
+      sizes.width / sizes.height,
+      0.1,
+      100
+    );
+    camera2.position.z = 5;
+    scene2.add(camera2);
+
+    /**
+     * renderer2
+     */
+    const renderer2 = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: true,
+    });
     renderer2.setSize(window.innerWidth, window.innerHeight); // Ajustar al tamaño de toda la pantalla
-    renderer2.render(scene2, camera2);
+    renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer2.setClearColor(0xffffff, 0);
 
-    window.requestAnimationFrame(tick);
-  };
+    /**
+     * Animate
+     */
+    const clock = new THREE.Clock();
 
-  tick();
+    let currentIntersect = null;
+
+    const tick = () => {
+      const elapsedTime = clock.getElapsedTime();
+
+      // Render
+      renderer2.setSize(window.innerWidth, window.innerHeight); // Ajustar al tamaño de toda la pantalla
+      renderer2.render(scene2, camera2);
+
+      window.requestAnimationFrame(tick);
+    };
+
+    tick();
+  }
+  objects();
+  gsap.config({ trialWarn: false });
 }
-objects();
-gsap.config({ trialWarn: false });
