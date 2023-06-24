@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import LangSelector from './components/LangSelector';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
       <Services />
       <Work />
       <Contact />
-      {/* <div className='h-[4000px]'></div> */}
+      <Footer />
+      {/* <div className='h-[100px]'></div> */}
     </div>
   )
 }

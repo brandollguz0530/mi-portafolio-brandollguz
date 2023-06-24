@@ -43,6 +43,8 @@
     "alertButton": "Entiendo",
     "alert1": "el correo fue enviado",
     "alertText1": "Su mensaje fue enviado exitosamente. Me comunicaré contigo de inmediato.",
-    "alertButton1": "listo"
+    "alertButton1": "listo",
+    "footer": "Mi sitio web. Reservados todos los derechos.",
+    "footer1": "certificado de React."
   }
 }

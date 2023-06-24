@@ -43,6 +43,8 @@
     "alertButton": "I understand",
     "alert1": "The mail was sent",
     "alertText1": "Your message was sent successfully. I will contact you immediately.",
-    "alertButton1": "ready"
+    "alertButton1": "ready",
+    "footer": "My Website. All rights reserved.",
+    "footer1": "react certificate."
   }
 }
