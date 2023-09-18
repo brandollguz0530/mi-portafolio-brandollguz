@@ -13,6 +13,7 @@ import { Link } from 'react-scroll'
 import { useTranslation } from "react-i18next"
 
 
+
 const Banner = () => {
   const [t, i18n] = useTranslation("global")
 
@@ -71,7 +72,7 @@ const Banner = () => {
               <Link to='contact'>
                 <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>{t("Banner.contac")}</button>
               </Link>
-              <a href="my_resume.pdf" class="text-gradient btn-link" target="_blank">
+              <a href="https://docs.google.com/document/d/1nSD55wwDLEsA8wT9XLXJ7MlD_NdgZAEs2f-XS5PGLZQ/edit?usp=sharing" class="text-gradient btn-link" target="_blank">
                 {t("Banner.CV")}
               </a>
             </motion.div>
