@@ -67,6 +67,8 @@ const Img = styled.img`
   }
 `;
 
+
+
 const Prueva = () => {
   return (
     <motion.div
@@ -76,7 +78,7 @@ const Prueva = () => {
       viewport={{ once: false, amount: 0.3 }}
       className=" mt-52"
       >
-    <Section >
+    <Section>
       
       <Container>
         <Right>
