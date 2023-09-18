@@ -71,7 +71,7 @@ const Banner = () => {
               <Link to='contact'>
                 <button className='btn btn-lg transition duration-300 transform hover:scale-110 focus:scale-110 mr-2'>{t("Banner.contac")}</button>
               </Link>
-              <a href="/src/CV/Mi-hoja-de-vida.pdf" class="text-gradient btn-link" target="_blank">
+              <a href="../src/CV/Mi-hoja-de-vida.pdf" class="text-gradient btn-link" target="_blank">
                 {t("Banner.CV")}
               </a>
             </motion.div>

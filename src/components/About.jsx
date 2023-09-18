@@ -83,7 +83,7 @@ const About = () => {
                   {t("Banner.contac")}
                 </button>
               </Link>
-              <a href="/src/CV/Mi-hoja-de-vida.pdf" className="text-gradient btn-link" target="_blank">
+              <a href="../src/CV/Mi-hoja-de-vida.pdf" className="text-gradient btn-link" target="_blank">
                 {t("Banner.CV")}
               </a>
             </div>
